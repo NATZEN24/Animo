@@ -1,0 +1,205 @@
+body {
+    margin: .5rem 1rem;
+    padding: 0;
+    box-sizing: border-box;
+   background-color: skyblue;
+}
+.box {
+
+    width: 100%;
+    background: url(/img/town.png) center;
+    height: 100vh;
+    
+}
+.sun {
+    display: flex;
+    justify-content: center;
+ 
+    position: absolute;
+    margin-left: 55rem;
+    top: 9rem;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+.sun>img {
+    width: 6rem;
+    height: 6rem;
+    /* position: absolute; */
+
+    animation: spin 15s infinite linear;
+}
+
+header {
+    position: relative;
+}
+.cloud1, .cloud2, .cloud3, .cloud4 {
+    margin-left: 55rem;
+    position: absolute;
+
+    animation: scaleANDfade 10s linear infinite;
+} 
+
+@keyframes scaleANDfade {
+    0% {
+        opacity: .2;
+        transform: scale(0.5);}
+    25% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: .5;
+        transform: scale(1.1);}
+    75% {
+        opacity: .6;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    } 
+   
+}
+
+.cloud1 {
+   top: 8rem;
+   left: -2rem;
+}
+.cloud2 {
+   top: 10rem;
+   left: 2rem;
+}
+.cloud3{
+   top: 11rem;
+   left: -1rem;
+}
+.cloud4 {
+top: 12rem;
+left: 2rem;
+}
+.balloon1, .balloon2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+   
+}
+
+.b2 {
+    position: absolute;
+width: 3rem;
+top: 15rem;
+animation: wave2 40s infinite linear;
+}
+.b1 {
+    position: absolute;
+    width: 5rem;
+    top: 7rem; 
+
+    animation: wave1 50s infinite linear;
+}
+@keyframes wave1 {
+    0% {
+        transform: translateX(100vw) translateY(0); /* Start from the right side */
+      }
+      25% {
+        transform: translateX(75vw) translateY(-10px); /* Move left and up */
+      }
+      50% {
+        transform: translateX(50vw) translateY(0); /* Reach the middle */
+      }
+      75% {
+        transform: translateX(25vw) translateY(50px); /* Move left and down */
+      }
+      100% {
+        transform: translateX(-100px) translateY(0); /* End off the left side */
+      }
+}
+@keyframes wave2 {
+    0% {
+        transform: translateX(-100px) translateY(0); 
+      }
+      10% {
+        transform: translateX(10vw) translateY(-50px); 
+      }
+      20% {
+        transform: translateX(20vw) translateY(0); 
+      }
+      30% {
+        transform: translateX(30vw) translateY(-50px); /
+      }
+      40% {
+        transform: translateX(40vw) translateY(0); 
+      }
+      50% {
+        transform: translateX(50vw) translateY(-50px); 
+      }
+      60% {
+        transform: translateX(60vw) translateY(0); 
+      }
+      70% {
+        transform: translateX(70vw) translateY(-50px); 
+      }
+      80% {
+        transform: translateX(80vw) translateY(0); 
+      }
+      90% {
+        transform: translateX(90vw) translateY(-50px); 
+      }
+      100% {
+        transform: translateX(100vw) translateY(0); 
+      }
+}
+
+.carbox1, .carbox2, .monsterbox {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.car1 {
+    position: absolute;
+    width: 15rem;
+    top: 37rem;
+
+    animation: car1 1s infinite;
+    
+}
+.car2 {
+    position: absolute;
+    width: 20rem;
+    top: 37rem;
+    
+    animation: car2 2s forwards infinite;
+}
+.monster {
+    position: absolute;
+    width: 14rem;
+    top: 42.5rem;
+    left: 30rem;
+
+    animation: monster 2s infinite;
+}
+@keyframes monster {
+    from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+@keyframes car2 {
+    from {
+        right: 0; 
+      }
+      to {
+        right: 50%; 
+        transform: translateX(50%);
+      }
+}
+@keyframes car1 {
+    from {
+        left: 0; 
+      }
+      to {
+        left: 100%; 
+      }
+}
